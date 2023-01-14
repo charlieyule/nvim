@@ -21,5 +21,8 @@ require("lazy").setup("plugins", {
   defaults = {
     lazy = true,
     version = "*",
+  },
+  git = {
+    url_format = "git@github.com:/%s.git"
   }
 })
