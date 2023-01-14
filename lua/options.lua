@@ -1,6 +1,7 @@
 -- :help options
 local o = vim.opt
 
+o.clipboard = "unnamedplus"
 o.cursorline = true
 o.expandtab = true
 o.mouse = "a"
