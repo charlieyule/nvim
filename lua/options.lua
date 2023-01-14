@@ -2,6 +2,7 @@
 local o = vim.opt
 
 o.clipboard = "unnamedplus"
+o.completeopt:append { "menuone", "noselect" }
 o.cursorline = true
 o.expandtab = true
 o.mouse = "a"

@@ -26,3 +26,5 @@ require("lazy").setup("plugins", {
     url_format = "git@github.com:/%s.git"
   }
 })
+
+require("configs.cmp")
