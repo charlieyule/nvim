@@ -1,4 +1,7 @@
+-- vim options
 require("options")
+
+-- vim keymaps
 require("keymaps")
 
 -- lazy.nvim bootstrap
@@ -15,8 +18,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " " -- make sure to set `mapleader` before lazy so your mappings are correct
-
+-- plugin installations
 require("lazy").setup("plugins", {
   defaults = {
     lazy = true,
@@ -27,4 +29,5 @@ require("lazy").setup("plugins", {
   }
 })
 
-require("configs.cmp")
+-- plugin setups
+require("setups.init")
