@@ -1,3 +1,3 @@
 return {
-  { "folke/tokyonight.nvim", lazy = false },
+  { "folke/tokyonight.nvim" },
 }
