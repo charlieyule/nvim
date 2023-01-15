@@ -8,5 +8,6 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "43c7f402cb9822b61b5dc05bf0b385928df256a6" },
   "mason.nvim": { "branch": "main", "commit": "8529daa38242091d579ed24f28b35c8b80928e8a" },
   "nvim-cmp": { "branch": "main", "commit": "983453e32cb35533a119725883c04436d16c0120" },
-  "nvim-lspconfig": { "branch": "master", "commit": "2df0fbdadd947cd2995566a0117b8802a9ba74f4" }
+  "nvim-lspconfig": { "branch": "master", "commit": "2df0fbdadd947cd2995566a0117b8802a9ba74f4" },
+  "tokyonight.nvim": { "branch": "main", "commit": "def91651c41f6d1d43ebcb50763324d35331baee" }
 }
