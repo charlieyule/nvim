@@ -1,4 +1,5 @@
 require("setups.cmp")
+require("setups.colorscheme")
 require("setups.lsp")
 require("setups.telescope")
 require("setups.treesitter")

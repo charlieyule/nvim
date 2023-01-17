@@ -31,6 +31,3 @@ require("lazy").setup("plugins", {
 
 -- plugin setups
 require("setups.init")
-
--- colorscheme setting
-vim.cmd [[colorscheme tokyonight]]
