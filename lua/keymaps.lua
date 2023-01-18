@@ -11,5 +11,13 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
+-- bufferline
+keymap("n", "<leader>bp", ":BufferLinePick<CR>", opts)
+keymap("n", "<leader>bl", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<leader>bh", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<leader>bml", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<leader>bmh", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<leader>bx", ":bd<CR>", opts)
+
 keymap("n", "<leader>l", "<C-w>H", opts)
 keymap("n", "<leader>k", "<C-w>K", opts)

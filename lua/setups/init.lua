@@ -1,3 +1,4 @@
+require("setups.buffer")
 require("setups.cmp")
 require("setups.colorscheme")
 require("setups.explorer")
