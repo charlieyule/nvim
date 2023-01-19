@@ -1,4 +1,5 @@
 return {
+  gopls = {},
   sumneko_lua = {
     settings = {
       Lua = {

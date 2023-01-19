@@ -54,7 +54,7 @@ mason_lspconfig.setup_handlers {
     require("lspconfig")[server_name].setup {
       capabilities = server_handlers["capabilities"] or capabilities,
       on_attach = server_handlers["on_attach"] or on_attach,
-      settings = server_handlers[server_name].settings,
+      settings = server_handlers[server_name].settings or {},
     }
   end,
 }
