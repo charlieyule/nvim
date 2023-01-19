@@ -17,7 +17,7 @@ keymap("n", "<leader>bl", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<leader>bh", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "<leader>bml", ":BufferLineMoveNext<CR>", opts)
 keymap("n", "<leader>bmh", ":BufferLineMovePrev<CR>", opts)
-keymap("n", "<leader>bx", ":bd<CR>", opts)
+keymap("n", "<leader>bx", ":Bd<CR>", opts)
 
 keymap("n", "<leader>l", "<C-w>H", opts)
 keymap("n", "<leader>k", "<C-w>K", opts)
