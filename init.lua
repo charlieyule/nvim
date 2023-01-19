@@ -25,9 +25,11 @@ require("lazy").setup("plugins", {
     version = "*",
   },
   git = {
-    url_format = "git@github.com:/%s.git"
-  }
+    url_format = "git@github.com:/%s.git",
+  },
 })
 
 -- plugin setups
 require("setups.init")
+
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])

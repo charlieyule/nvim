@@ -3,8 +3,8 @@ if not status_ok then
   return
 end
 
-configs.setup {
-  ensure_installed = { 
+configs.setup({
+  ensure_installed = {
     "lua",
     "vim",
     "help",
@@ -14,4 +14,4 @@ configs.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true },
-}
+})

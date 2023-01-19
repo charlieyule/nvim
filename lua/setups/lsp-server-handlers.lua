@@ -6,6 +6,7 @@ return {
         workspace = { checkThirdParty = false },
         telemetry = { enable = false },
         diagnostics = { globals = { "vim" } },
+        format = { enable = false },
       },
     },
   },

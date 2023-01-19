@@ -2,7 +2,7 @@
 local o = vim.opt
 
 o.clipboard = "unnamedplus"
-o.completeopt:append { "menuone", "noselect" }
+o.completeopt:append({ "menuone", "noselect" })
 o.cursorline = true
 o.expandtab = true
 o.mouse = "a"
@@ -14,4 +14,4 @@ o.showtabline = 2
 o.splitbelow = true
 o.splitright = true
 o.wrap = false
-o.iskeyword:append "-"
+o.iskeyword:append("-")

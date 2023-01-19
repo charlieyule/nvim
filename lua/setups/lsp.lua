@@ -45,16 +45,16 @@ local on_attach = function(_, bufnr)
   lsp_keymaps(bufnr)
 end
 
-mason_lspconfig.setup {
+mason_lspconfig.setup({
   ensure_installed = vim.tbl_keys(server_handlers),
-}
+})
 
-mason_lspconfig.setup_handlers {
+mason_lspconfig.setup_handlers({
   function(server_name)
-    require("lspconfig")[server_name].setup {
+    require("lspconfig")[server_name].setup({
       capabilities = server_handlers["capabilities"] or capabilities,
       on_attach = server_handlers["on_attach"] or on_attach,
       settings = server_handlers[server_name].settings or {},
-    }
+    })
   end,
-}
+})
