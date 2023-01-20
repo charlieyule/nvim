@@ -15,3 +15,7 @@ o.splitbelow = true
 o.splitright = true
 o.wrap = false
 o.iskeyword:append("-")
+
+-- Show line diagnostics automatically in hover window
+o.updatetime = 250
+vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, source=true})]])
