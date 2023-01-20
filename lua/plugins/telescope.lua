@@ -1,4 +1,5 @@
 local nmap = require("utils.nmap")
+local ignore_patterns = require("languages.global")
 
 return {
   "nvim-telescope/telescope.nvim",
@@ -17,10 +18,7 @@ return {
 
     telescope.setup({
       defaults = {
-        file_ignore_patterns = {
-          -- Go
-          "vendor",
-        },
+        file_ignore_patterns = ignore_patterns,
       },
     })
   end,

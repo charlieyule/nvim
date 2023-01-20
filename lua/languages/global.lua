@@ -76,4 +76,5 @@ return {
     diagnostics = {},
     code_actions = {},
   },
+  telescope_ignore_patterns = {},
 }
