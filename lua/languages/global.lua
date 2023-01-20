@@ -32,14 +32,14 @@ local telescope_ignore_patterns = {}
 -- Language server List:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local function add_language_server(name, options)
-  language_servers[name] = options
+  language_servers[name] = options or {}
 end
 
 -- type: "formatting" | "diagnostics" | "code_actions"
 -- Avaiable source:
 -- :NullLsInfo
 local function add_null_ls_source(type, name, options)
-  null_ls_sources[type][name] = options
+  null_ls_sources[type][name] = options or {}
 end
 
 local function add_telescope_ingore_pattern(pattern)
@@ -53,4 +53,7 @@ return {
   add_language_server = add_language_server,
   add_null_ls_source = add_null_ls_source,
   add_telescope_ingore_pattern = add_telescope_ingore_pattern,
+  FORMATTING = "formatting",
+  DIAGNOSTICS = "diagnostics",
+  CODE_ACTIONS = "code_actions",
 }

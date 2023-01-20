@@ -1,4 +1,6 @@
-require(vim.g.languages)
+if not vim.g.languages.go then
+  return
+end
 
 local o = vim.opt
 

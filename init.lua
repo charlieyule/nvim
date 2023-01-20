@@ -1,3 +1,11 @@
+vim.g.languages = {
+  go = os.getenv("NVIM_LANGUAGE_GO"),
+}
+
+if vim.g.languages.go then
+  require("languages.go")
+end
+
 -- vim options
 require("options")
 
