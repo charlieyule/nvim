@@ -29,7 +29,4 @@ require("lazy").setup("plugins", {
   },
 })
 
--- plugin setups
-require("setups.init")
-
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
