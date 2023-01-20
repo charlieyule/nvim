@@ -33,11 +33,6 @@ local on_attach = function(_, bufnr)
   lsp_keymaps(bufnr)
 end
 
--- Avaiable language server fields
--- :help lspconfig-setup
---
--- Language server list:
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local language_servers = {
   sumneko_lua = {
     settings = {
@@ -61,5 +56,24 @@ for _, options in pairs(language_servers) do
 end
 
 return {
+  -- Avaiable language server fields
+  -- :help lspconfig-setup
+  --
+  -- Language server list:
+  -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
   language_servers = language_servers,
+  -- Avaiable source:
+  -- :NullLsInfo
+  null_ls_sources = {
+    formatting = {
+      stylua = {
+        extra_args = {
+          "--indent-type=Spaces",
+          "--indent-width=2",
+        },
+      },
+    },
+    diagnostics = {},
+    code_actions = {},
+  },
 }
