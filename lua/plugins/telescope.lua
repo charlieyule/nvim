@@ -1,3 +1,4 @@
+local nmap = require("utils.nmap")
 return {
   {
     "nvim-telescope/telescope.nvim",
@@ -9,10 +10,10 @@ return {
       local telescope = require("telescope")
       local builtin = require("telescope.builtin")
 
-      vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-      vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-      vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-      vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+      nmap("<leader>ff", builtin.find_files, "[F]ind [F]iles")
+      nmap("<leader>fg", builtin.live_grep, "[L]ive [G]rep")
+      nmap("<leader>fb", builtin.buffers, "[F]ind [B]uffer")
+      nmap("<leader>fh", builtin.help_tags, "[F]ind [H]elp")
 
       telescope.setup({
         defaults = {

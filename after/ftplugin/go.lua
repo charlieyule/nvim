@@ -1,3 +1,5 @@
+require(vim.g.languages)
+
 local o = vim.opt
 
 o.expandtab = false
