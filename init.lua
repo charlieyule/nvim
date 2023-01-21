@@ -1,9 +1,11 @@
 vim.g.languages = {
-  go = os.getenv("NVIM_LANGUAGE_GO"),
+  go = false,
 }
 
-if vim.g.languages.go then
-  require("languages.go")
+for language, enable in pairs(vim.g.languages) do
+  if enable or os.getenv("NVIM_LANGUAGE_" .. string.upper(language)) then
+    require("languages." .. language)
+  end
 end
 
 -- vim options
