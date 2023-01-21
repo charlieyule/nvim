@@ -8,6 +8,10 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+keymap("i", "jk", "<ESC>", opts)
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
