@@ -1,3 +1,5 @@
+-- Global variables that contains language-specific contents.
+local plugins = {}
 local language_servers = {
   sumneko_lua = {
     settings = {
@@ -10,7 +12,6 @@ local language_servers = {
     },
   },
 }
-
 local null_ls_sources = {
   formatting = {
     stylua = {
@@ -23,8 +24,12 @@ local null_ls_sources = {
   diagnostics = {},
   code_actions = {},
 }
-
 local telescope_ignore_patterns = {}
+
+-- Global helper functions to add language-specific contents.
+local function add_plugin(plugin)
+  table.insert(plugins, plugin)
+end
 
 -- Avaiable language server options
 -- :help lspconfig-setup
@@ -47,9 +52,11 @@ local function add_telescope_ingore_pattern(pattern)
 end
 
 return {
+  plugins = plugins,
   language_servers = language_servers,
   null_ls_sources = null_ls_sources,
   telescope_ignore_patterns = telescope_ignore_patterns,
+  add_plugin = add_plugin,
   add_language_server = add_language_server,
   add_null_ls_source = add_null_ls_source,
   add_telescope_ingore_pattern = add_telescope_ingore_pattern,

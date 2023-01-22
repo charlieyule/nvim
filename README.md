@@ -1,2 +1,3 @@
 # nvim
-Charlie's Neovim configurations
+
+Charlie's Neovim configuration
