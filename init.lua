@@ -1,5 +1,6 @@
 vim.g.languages = {
   go = false,
+  markdown = false,
 }
 
 for language, enable in pairs(vim.g.languages) do
