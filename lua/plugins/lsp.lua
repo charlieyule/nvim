@@ -1,4 +1,4 @@
-local nmap = require("utils.nmap")
+local nmap = require("utils.keymap").nmap
 local language_servers = require("languages.global").language_servers
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

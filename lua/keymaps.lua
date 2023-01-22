@@ -1,32 +1,31 @@
+local keymap = require("utils.keymap")
+
 vim.g.mapleader = " "
 
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+keymap.nmap("<C-t>", "<C-w>v")
+keymap.nmap("<C-h>", "<C-w>h")
+keymap.nmap("<C-j>", "<C-w>j")
+keymap.nmap("<C-k>", "<C-w>k")
+keymap.nmap("<C-l>", "<C-w>l")
 
-keymap("n", "<C-t>", "<C-w>v", opts)
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
-keymap("i", "jk", "<ESC>", opts)
-keymap("i", "<C-h>", "<LEFT>", opts)
-keymap("i", "<C-j>", "<DOWN>", opts)
-keymap("i", "<C-k>", "<UP>", opts)
-keymap("i", "<C-l>", "<RIGHT>", opts)
-keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap.imap("jk", "<ESC>")
+keymap.imap("<C-h>", "<LEFT>")
+keymap.imap("<C-j>", "<DOWN>")
+keymap.imap("<C-k>", "<UP>")
+keymap.imap("<C-l>", "<RIGHT>")
+keymap.vmap("J", ":m '>+1<CR>gv=gv")
+keymap.vmap("K", ":m '<-2<CR>gv=gv")
 
 -- nvim-tree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap.nmap("<leader>e", ":NvimTreeToggle<CR>")
 
 -- bufferline
-keymap("n", "<leader>bp", ":BufferLinePick<CR>", opts)
-keymap("n", "<C-m>", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "<C-n>", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "<leader>bm", ":BufferLineMoveNext<CR>", opts)
-keymap("n", "<leader>bn", ":BufferLineMovePrev<CR>", opts)
-keymap("n", "<C-w>", ":Bd<CR>", opts)
+keymap.nmap("<leader>bp", ":BufferLinePick<CR>")
+keymap.nmap("<C-m>", ":BufferLineCycleNext<CR>")
+keymap.nmap("<C-n>", ":BufferLineCyclePrev<CR>")
+keymap.nmap("<leader>bm", ":BufferLineMoveNext<CR>")
+keymap.nmap("<leader>bn", ":BufferLineMovePrev<CR>")
+keymap.nmap("<C-w>", ":Bd<CR>")
 
-keymap("n", "<leader>l", "<C-w>H", opts)
-keymap("n", "<leader>k", "<C-w>K", opts)
+keymap.nmap("<leader>l", "<C-w>H")
+keymap.nmap("<leader>k", "<C-w>K")

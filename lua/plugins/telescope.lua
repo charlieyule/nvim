@@ -1,4 +1,4 @@
-local nmap = require("utils.nmap")
+local nmap = require("utils.keymap").nmap
 local ignore_patterns = require("languages.global")
 
 return {
