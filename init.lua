@@ -1,13 +1,16 @@
-vim.g.languages = {
+local languages = {
   go = false,
   markdown = false,
 }
 
-for language, enable in pairs(vim.g.languages) do
+for language, enable in pairs(languages) do
   if enable or os.getenv("NVIM_LANGUAGE_" .. string.upper(language)) then
+    languages[language] = true
     require("languages." .. language)
   end
 end
+
+vim.g.languages = languages
 
 -- vim options
 require("options")
