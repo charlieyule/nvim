@@ -1,3 +1,4 @@
+local nmap = require("utils.keymap").nmap
 local tmap = require("utils.keymap").tmap
 
 return {
@@ -8,15 +9,30 @@ return {
       open_mapping = [[<C-\>]],
       size = 20,
       persist_size = true,
+      on_open = function(term)
+        if string.sub(term.name, 1, #"lazygit") ~= "lazygit" then
+          tmap("<esc>", [[<C-\><C-n>]], "", term.bufnr)
+          tmap("jk", [[<C-\><C-n>]], "", term.bufnr)
+          tmap("<C-h>", [[<Cmd>wincmd h<CR>]], "", term.bufnr)
+          tmap("<C-j>", [[<Cmd>wincmd j<CR>]], "", term.bufnr)
+          tmap("<C-k>", [[<Cmd>wincmd k<CR>]], "", term.bufnr)
+          tmap("<C-l>", [[<Cmd>wincmd l<CR>]], "", term.bufnr)
+        end
+      end,
     })
-    function _G.set_terminal_keymaps()
-      tmap("<esc>", [[<C-\><C-n>]])
-      tmap("jk", [[<C-\><C-n>]])
-      tmap("<C-h>", [[<Cmd>wincmd h<CR>]])
-      tmap("<C-j>", [[<Cmd>wincmd j<CR>]])
-      tmap("<C-k>", [[<Cmd>wincmd k<CR>]])
-      tmap("<C-l>", [[<Cmd>wincmd l<CR>]])
+
+    -- lazygit
+    local Terminal = require("toggleterm.terminal").Terminal
+    local lazygit = Terminal:new({
+      cmd = "lazygit",
+      direction = "float",
+      hidden = true,
+      terminal_mappings = false,
+      count = 11,
+    })
+    function _G._lazygit_toggle()
+      lazygit:toggle()
     end
-    vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+    nmap("<leader>g", "<cmd>lua _lazygit_toggle()<CR>")
   end,
 }
