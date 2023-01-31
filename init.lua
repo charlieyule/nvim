@@ -1,6 +1,7 @@
 local languages = {
   go = false,
   markdown = false,
+  yaml = false,
 }
 
 for language, enable in pairs(languages) do
