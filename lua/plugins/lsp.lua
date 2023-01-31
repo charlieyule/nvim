@@ -12,10 +12,10 @@ local lsp_keymaps = function(bufnr)
   nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", bufnr)
   nmap("<leader>fm", vim.lsp.buf.format, "[F]or[m]at", bufnr)
 
-  nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition", bufnr)
+  nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition", bufnr)
   nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences", bufnr)
-  nmap("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation", bufnr)
-  nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition", bufnr)
+  nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation", bufnr)
+  nmap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition", bufnr)
   nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols", bufnr)
   nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols", bufnr)
 
