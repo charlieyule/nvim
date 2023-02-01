@@ -1,4 +1,5 @@
 local languages = {
+  docker = false,
   go = false,
   markdown = false,
   yaml = false,
