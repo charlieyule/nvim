@@ -2,6 +2,7 @@ local languages = {
   docker = false,
   go = false,
   markdown = false,
+  toml = false,
   yaml = false,
 }
 
